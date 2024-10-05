@@ -1,6 +1,5 @@
 // server.js
 import express from 'express';
-import fetch from 'node-fetch';
 import OpenAI from 'openai';
 import dotenv from 'dotenv'
 
@@ -30,7 +29,17 @@ app.post('/api/call-openai', async (req, res) => {
 
     try {
         const chatCompletion = await client.chat.completions.create({
-            messages: [{ role: 'user', content: "What can I cook with " + ing, }],
+            messages: [
+                {
+                    role:"system",
+                    content:[{
+                        type: "text",
+                        text: 
+                          "You are a robot chef helping out to create a recipe for a mother with a given set of ingredients. Assume that they have basic ingredients like flour and sugar. Please only return one recipe and try to keep it brief."
+                      }]
+                },
+                {role: 'user', 
+                content: "Here are the ingredients: " + ing, }],
             model: "gpt-4o-mini",
         });
 

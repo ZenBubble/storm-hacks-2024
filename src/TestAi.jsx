@@ -6,7 +6,6 @@ function TestAi() {
 
     async function callOpenAIApi() {
         const APIBody = { ing };
-    
         await fetch("/api/call-openai", {
             method: "POST",
             headers: {
@@ -17,7 +16,7 @@ function TestAi() {
         .then((data) => data.json())
         .then((data) => {
             console.log(data);
-            setRec(data.choices[0].message.content);
+            setRec(data);
         })
         .catch((error) => {
             console.error(error);
@@ -35,7 +34,7 @@ function TestAi() {
         <div>
             <button onClick={callOpenAIApi}>Get recipe</button>
             {rec !==""?
-            <h3>Recipe:{rec}</h3>
+            <h3>Recipe: {rec}</h3>
             :
             null
             }
