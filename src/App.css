@@ -40,3 +40,53 @@
 .read-the-docs {
   color: #888;
 }
+
+.scroll-container {
+    max-height: 150px; /* Adjust the height to show 3 buttons */
+    overflow-y: auto; /* Enable vertical scrolling */
+    border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+    padding: 10px; /* Optional: Add some padding */
+    border-radius: 10px;
+    flex: 1;
+    
+    
+}
+
+.container {
+    display:flex;
+    gap:20px;
+    justify-content: center;
+    align-items:flex-start;
+    width:800px;
+}
+
+.scroll-container {
+max-height: 400px; /* Adjust the height to show 3 buttons */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+  padding: 10px; /* Optional: Add some padding */
+  border-radius: 10px; /* Add rounded corners */
+  flex: 1; /* Allow the container to grow and fill available space */
+
+}
+
+.scroll-container > div {
+    margin-bottom: 10px;
+}
+
+.button-container {
+    margin-bottom: 10px;
+}
+
+.full-width-button {
+    width: 100%;
+    box-sizing:border-box;
+}
+.result-container {
+    flex: 1;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    max-height: 800px;
+    overflow-y: auto;
+
+}
