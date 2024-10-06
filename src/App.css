@@ -68,12 +68,9 @@
     border-radius: 4px;
 }
 
-
-
 li{
     border-color: 1px solid black;
 }
-
 
 .container {
     display:flex;
