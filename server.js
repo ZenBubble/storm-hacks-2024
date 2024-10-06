@@ -34,13 +34,16 @@ app.post('/api/call-openai', async (req, res) => {
                     role:"system",
                     content:[{
                         type: "text",
-                        text: 
-                          "You are a robot chef helping out to create a recipe for a mother with a given set of ingredients. Assume that they have basic ingredients like flour and sugar. Please only return one recipe and try to keep it brief."
+                        text: "You are a robot chef helping out to create a recipe for a mother with a given set of ingredients. Assume that they have basic ingredients like flour and sugar. Please only return one recipe and try to keep it brief." +
+                        'return it formatted like this:' +
+                        '{"name": "sample name", "ingredients": "sample ingredients", "steps": "sample steps"}' +
+                        'always respond with only the object formatted properly, and never output anything else'
                       }]
                 },
                 {role: 'user', 
                 content: "Here are the ingredients: " + ing, }],
             model: "gpt-4o-mini",
+            //response_format: { "type": "json_object" }
         });
 
         /*const response = await fetch("https://api.openai.com/v1/chat/completion", {

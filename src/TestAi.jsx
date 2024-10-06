@@ -3,6 +3,7 @@ import { useState } from 'react';
 function TestAi() {
     const [ing, setIng] = useState("")
     const [rec, setRec] = useState("")
+    const recipes = []
 
     async function callOpenAIApi() {
         const APIBody = { ing };
@@ -15,12 +16,15 @@ function TestAi() {
         })
         .then((data) => data.json())
         .then((data) => {
-            console.log(data);
+            //console.log(data);
             setRec(data);
+            const obj = JSON.parse(data);
+            recipes.push(obj);
+            console.log(recipes);
         })
         .catch((error) => {
             console.error(error);
-            setRec("Oops! Something went wrong 😅");
+            setRec("Caught error, either data was not made or assigning errors");
         });
     }
     
@@ -41,8 +45,6 @@ function TestAi() {
         </div>
         </>
     )
-
-    
   }
   
   export default TestAi
