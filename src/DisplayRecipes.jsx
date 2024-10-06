@@ -10,6 +10,7 @@ function DisplayRecipes({recipeData, updateSelected, select}) {
 
     return (
         <div>
+            {Object.keys(recipeData).length > 0 &&
             <div className="container">
                 <div className="scroll-container">
                     {recipeData.map((item) => (
@@ -34,7 +35,7 @@ function DisplayRecipes({recipeData, updateSelected, select}) {
 
             </div>
 
-            
+}
         </div>
     );
 };

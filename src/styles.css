@@ -150,10 +150,6 @@ body {
     font-size: 1000px;
 }
 
-#result-text {
-    
-}
-
 #list-of-selected-ingredients {
     max-height: 75px; 
     overflow-y: auto;
