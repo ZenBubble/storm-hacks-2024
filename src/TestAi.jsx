@@ -1,9 +1,18 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
 
 function TestAi() {
     const [ing, setIng] = useState("")
     const [rec, setRec] = useState("")
-    const recipes = []
+    const [recipes, setRecipes] = useState([]);
+
+    useEffect(() => {
+        // Retrieve data from localStorage and parse it as an array
+        const storedData = localStorage.getItem('myData');
+        if (storedData) {
+          setRecipes(JSON.parse(storedData)); // Parse stored JSON string into an array
+        }
+      }, []);
 
     async function callOpenAIApi() {
         const APIBody = { ing };
@@ -17,10 +26,12 @@ function TestAi() {
         .then((data) => data.json())
         .then((data) => {
             //console.log(data);
-            setRec(data);
-            const obj = JSON.parse(data);
-            recipes.push(obj);
-            console.log(recipes);
+            setRec(data);  
+
+            const updatedData = [...recipes, JSON.parse(data)];
+            setRecipes(updatedData);
+            localStorage.setItem('recipes', JSON.stringify(updatedData));
+            console.log(JSON.parse(localStorage.getItem("recipes")));
         })
         .catch((error) => {
             console.error(error);
@@ -38,7 +49,7 @@ function TestAi() {
         <div>
             <button onClick={callOpenAIApi}>Get recipe</button>
             {rec !==""?
-            <h3>Recipe: {rec}</h3>
+            <h3>{rec}</h3>
             :
             null
             }
