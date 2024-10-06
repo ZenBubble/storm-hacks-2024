@@ -5,12 +5,36 @@
 }
 
 #titlescreen {
-    padding: 50px;
+    padding: 20px;
     background-color: grey;
-    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    font-size: 100px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+#title-logo {
+    height: 100px;
+    width: 100px;
+}
+
+#title-text {
+    font-size: 60px;
+    color: white;
+    margin-left: 20px;
+    font-family: "Lucida Console", Monospace;
+}
+
+.small-photos {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.small-photo {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
 }
 
 .container {
@@ -27,7 +51,7 @@
     height: 400px;
     width: 100%; 
     background-color: grey;
-    border-radius: 10px;
+    border-radius: 0px;
 }
 
 .button-group {
@@ -93,7 +117,12 @@
     font-size: 24px;
 }
 
-.one { background-color: red; }
-.two { background-color: yellow; color: black; }
-.three { background-color: green; }
-.four { background-color: blue; }
+.box {
+    background-color: lightgray;
+    border: 2px solid black;
+}
+
+.one { background-color: lightgray; }
+.two { background-color: lightgray; }
+.three { background-color: lightgray; }
+.four { background-color: lightgray; }
