@@ -2,26 +2,14 @@ import React, { useState, useEffect } from 'react';
 import Button from '@mui/material/Button';
 import './App.css';
 
-function DisplayRecipes({recipeData}) {
-    const [selectedRecipe, setSelectedRecipe] = useState('');
-
-    console.log(recipeData)
-
-    
-    // useEffect(() => {
-    //     window.addEventListener('mousemove', () => {
-    //        setRecipeData(JSON.parse(localStorage.getItem('recipes')) || [])  
-    //        console.log("got event")
-    //     }); }, [])
-
+function DisplayRecipes({recipeData, updateSelected, select}) {
 
     const handleButtonClick = (recipe) => {
-        setSelectedRecipe(recipe);
+        updateSelected(recipe);
     };
 
     return (
         <div>
-            <h1>Your Recipes:</h1>
             <div className="container">
                 <div className="scroll-container">
                     {recipeData.map((item) => (
@@ -33,7 +21,8 @@ function DisplayRecipes({recipeData}) {
                         </div>
                     ))}
                 </div>
-                {selectedRecipe && (
+{/*                 
+                 {selectedRecipe && (
                 <div className="result-container">
                     <h3>Ingredients:</h3>
                     <p>{selectedRecipe.ingredients}</p>
@@ -41,7 +30,7 @@ function DisplayRecipes({recipeData}) {
                     <p>{selectedRecipe.steps}</p>
 
                 </div>
-            )}
+            )}  */}
 
             </div>
 

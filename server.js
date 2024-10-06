@@ -19,7 +19,7 @@ const client = new OpenAI({
 app.use(express.json());
 
 app.post('/api/call-openai', async (req, res) => {
-    const { ing } = req.body;
+    const { inp } = req.body;
 
     /*const APIBody = {
         model: "gpt-4o-mini",
@@ -37,11 +37,11 @@ app.post('/api/call-openai', async (req, res) => {
                         text: "You are a robot chef helping out to create a recipe for a mother with a given set of ingredients. Assume that they have basic ingredients like flour and sugar. Please only return one recipe and try to keep it brief." +
                         'return it formatted like this:' +
                         '{"name": "sample name", "ingredients": "sample ingredients", "steps": "sample steps"}' +
-                        'always respond with only the object formatted properly, and never output anything else'
+                        'always respond with only the object formatted properly, and never output anything else.'
                       }]
                 },
                 {role: 'user', 
-                content: "Here are the ingredients: " + ing, }],
+                content: "Here are the ingredients: " + inp }],
             model: "gpt-4o-mini",
             //response_format: { "type": "json_object" }
         });

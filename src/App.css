@@ -1,121 +1,136 @@
-#root {
-  max-width: 2000px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+  #root {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
   }
-}
+  .logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }
 
-.card {
-  padding: 2em;
-}
+  @keyframes logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 
-.read-the-docs {
-  color: #888;
-}
+  @media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+      animation: logo-spin infinite 20s linear;
+    }
+  }
 
-.scroll-container {
-    max-height: 150px; /* Adjust the height to show 3 buttons */
-    overflow-y: auto; /* Enable vertical scrolling */
-    border: 1px solid #ccc; /* Optional: Add a border for better visibility */
-    padding: 10px; /* Optional: Add some padding */
+  .card {
+    padding: 2em;
+  }
+
+  .read-the-docs {
+    color: #888;
+  }
+
+  .scroll-container {
+      max-height: 150px; 
+      overflow-y: auto;
+      border: 1px solid #ccc;
+      padding: 10px; 
+      border-radius: 10px;
+      flex: 1;   
+  }
+
+  .fridge-ingredient-button {
+      margin-bottom: 10px;
+      border-color:1px solid #ccc;
+  }
+
+  .fridge-ingredient-button span {
+      margin-right: 10px;
+  }
+  .fridge-ingredient-button button {
+      margin-left: 5px;
+      padding: 5px 10px;
+      border: none;
+      background-color: #007BFF;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+  }
+
+  li{
+      border-color: 1px solid black;
+  }
+
+  .container {
+      display:flex;
+      gap:20px;
+      justify-content: center;
+      align-items:flex-start;
+      width:100%;
+      
+  }
+
+  .scroll-container {
+    max-height: 400px;
+    overflow-y: auto; 
+    border: 1px solid #ccc; 
+    padding: 10px; 
     border-radius: 10px;
-    flex: 1;   
-}
-
-.fridge-ingredient-button {
-    margin-bottom: 10px;
-    border-color:1px solid #ccc;
-}
-
-.fridge-ingredient-button span {
-    margin-right: 10px;
-}
-.fridge-ingredient-button button {
-    margin-left: 5px;
-    padding: 5px 10px;
-    border: none;
-    background-color: #007BFF;
-    color: white;
-    cursor: pointer;
-    border-radius: 4px;
-}
-
-li{
-    border-color: 1px solid black;
-}
-
-.container {
-    display:flex;
-    gap:20px;
-    justify-content: center;
-    align-items:flex-start;
-    width:100%;
-    
-}
-
-.scroll-container {
-  max-height: 400px; /* Adjust the height to show 3 buttons */
-  overflow-y: auto; /* Enable vertical scrolling */
-  border: 1px solid #ccc; /* Optional: Add a border for better visibility */
-  padding: 10px; /* Optional: Add some padding */
-  border-radius: 10px; /* Add rounded corners */
-  flex: 1; /* Allow the container to grow and fill available space */
-
-}
-
-.scroll-container > div {
-    margin-bottom: 10px;
-}
-
-.span {
-    border-color: black;
-}
-
-.button-container {
-    margin-bottom: 10px;
-}
-
-.full-width-button {
-    width: 100%;
-    box-sizing:border-box;
-}
-.result-container {
     flex: 1;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    max-height: 800px;
-    overflow-y: auto;
-    background-color: #f9f9f9;
-}
 
-body {
-    margin: 0px;
-}
+  }
+
+  .scroll-container > div {
+      margin-bottom: 10px;
+  }
+
+  .span {
+      border-color: black;
+  }
+
+  .button-container {
+      margin-bottom: 10px;
+  }
+
+  .full-width-button {
+      width: 100%;
+      box-sizing:border-box;
+  }
+  .result-container {
+      flex: 1;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      max-height: 800px;
+      overflow-y: auto;
+      background-color: #f9f9f9;
+  }
+
+  body {
+      margin: 0px;
+  }
+
+  .scroll-container {
+    display: flex;
+    flex-wrap: nowrap; /* Keeps all buttons on one line, with overflow if necessary */
+    overflow-x: auto; /* Allows horizontal scrolling if needed */
+  }
+  
+  .button-container {
+    margin-right: 10px; /* Add some space between the buttons */
+  }
+  
+  .full-width-button {
+    width: auto; /* Let the buttons size themselves based on their content */
+  }
+  
