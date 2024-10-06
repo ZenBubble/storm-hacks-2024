@@ -1,16 +1,15 @@
 import { useState, useEffect } from 'react';
 
 
-function TestAi() {
+function TestAi({recipes, updateRecipes}) {
     const [ing, setIng] = useState("")
     const [rec, setRec] = useState("")
-    const [recipes, setRecipes] = useState([]);
 
     useEffect(() => {
         // Retrieve data from localStorage and parse it as an array
         const storedData = localStorage.getItem('myData');
         if (storedData) {
-          setRecipes(JSON.parse(storedData)); // Parse stored JSON string into an array
+          updateRecipes(JSON.parse(storedData)); // Parse stored JSON string into an array
         }
       }, []);
 
@@ -29,7 +28,7 @@ function TestAi() {
             setRec(data);  
 
             const updatedData = [...recipes, JSON.parse(data)];
-            setRecipes(updatedData);
+            updateRecipes(updatedData);
             localStorage.setItem('recipes', JSON.stringify(updatedData));
             console.log(JSON.parse(localStorage.getItem("recipes")));
         })
@@ -48,11 +47,6 @@ function TestAi() {
         </div>
         <div>
             <button onClick={callOpenAIApi}>Get recipe</button>
-            {rec !==""?
-            <h3>{rec}</h3>
-            :
-            null
-            }
         </div>
         </>
     )
