@@ -55,10 +55,14 @@ function MainPage() {
       <div class="boxes">
       {select && (
                 <div className="result-container">
-                    <h3 className="result-header">Ingredients:</h3>
-                    <p className="result-txt">{select.ingredients}</p>
-                    <h3 className="result-header">Recipe:</h3>
-                    <p className="result-txt">{select.steps}</p>
+                    {select.ingredients &&
+                        <>
+                        <h3 className="result-header">Ingredients:</h3>
+                        <p className="result-txt">{select.ingredients}</p>
+                        <h3 className="result-header">Recipe:</h3>
+                        <p className="result-txt">{select.steps}</p>
+                        </>
+                    }
                 </div>
             )}
         {/* <div class="row noMargin">
