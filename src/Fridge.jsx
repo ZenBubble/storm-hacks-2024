@@ -25,7 +25,7 @@ function Fridge() {
     const handleClearSelectedIngredients = () => {
         setSelectedIngredients([]);
     }
-
+    
     return (
         <div className="fridge-container">
             <h1>Add to your fridge!</h1>
