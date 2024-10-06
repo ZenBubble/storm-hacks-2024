@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './styles.css'
+import './results.css'
 
 import TestAi from './TestAi.jsx'
 import DisplayRecipes from './DisplayRecipes.jsx'
@@ -56,8 +57,8 @@ function MainPage() {
                 <div className="result-container">
                     <h3 className="result-header">Ingredients:</h3>
                     <p className="result-txt">{select.ingredients}</p>
-                    <h3>Recipe:</h3>
-                    <p>{select.steps}</p>
+                    <h3 className="result-header">Recipe:</h3>
+                    <p className="result-txt">{select.steps}</p>
                 </div>
             )}
         {/* <div class="row noMargin">
