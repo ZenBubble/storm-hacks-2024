@@ -83,38 +83,41 @@ function TestAi({ recipes, updateRecipes }) {
                         onChange={(e) => setIng(e.target.value)} />
                 </div>
                 <button class="save-btn" onClick={handleAddIngredient}>Add Ingredient</button>
-                <div>
+                <div id="fridge-ingredients">
                     {ingredients.map((ingredient, index) => (
-                        <div className="fridge-ingredient-button" key={index}>
-                            <span id="ingredient-label">{ingredient}</span>
-                            <button onClick={() =>
-                                handleRemoveIngredient(index)}>Remove</button>
-                            <button onClick={() =>
-                                handleSelectIngredient(ingredient)}>Select</button>
+                        <div id="fridge-buttons">
+                            <div className="fridge-ingredient-button" key={index}>
+                                <span id="ingredient-label">{ingredient}</span>
+                                <button onClick={() =>
+                                    handleRemoveIngredient(index)}>Remove</button>
+                                <button onClick={() =>
+                                    handleSelectIngredient(ingredient)}>Select</button>
+                            </div>
                         </div>
+
                     ))}
-                    <div>
-                        <h2>Going into the pot:</h2>
-                        <ul>
+                </div>
+
+                <div>
+                    <h2>Going into the pot:</h2>
+                    <ul>
+                        <div id="list-of-selected-ingredients">
                             {selectedIngredients.map((ingredient, index) => (
                                 <div className="selected-ingredient" key={index}>
                                     {ingredient}
                                 </div>
                             ))}
-                        </ul>
-                        <button class="delete-btn" onClick={handleClearSelectedIngredients}>Clear Selected Ingredients</button>
-                        <div id="genBtn">
-                            <button class="generate-btn" onClick={callOpenAIApi}>Get recipe</button>
                         </div>
+
+                    </ul>
+                    <button class="delete-btn" onClick={handleClearSelectedIngredients}>Clear Selected Ingredients</button>
+                    <div id="genBtn">
+                        <button class="generate-btn" onClick={callOpenAIApi}>Get recipe</button>
                     </div>
                 </div>
-            </div>
-
-
-
-
-        </>
-    )
+                </div>
+            </>
+            )
 }
 
 export default TestAi
