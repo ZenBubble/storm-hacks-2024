@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  max-width: 2000px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -47,21 +47,45 @@
     border: 1px solid #ccc; /* Optional: Add a border for better visibility */
     padding: 10px; /* Optional: Add some padding */
     border-radius: 10px;
-    flex: 1;
-    
-    
+    flex: 1;   
 }
+
+.fridge-ingredient-button {
+    margin-bottom: 10px;
+    border-color:1px solid #ccc;
+}
+
+.fridge-ingredient-button span {
+    margin-right: 10px;
+}
+.fridge-ingredient-button button {
+    margin-left: 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+
+li{
+    border-color: 1px solid black;
+}
+
 
 .container {
     display:flex;
     gap:20px;
     justify-content: center;
     align-items:flex-start;
-    width:800px;
+    width:100%;
+    
 }
 
 .scroll-container {
-max-height: 400px; /* Adjust the height to show 3 buttons */
+  max-height: 400px; /* Adjust the height to show 3 buttons */
   overflow-y: auto; /* Enable vertical scrolling */
   border: 1px solid #ccc; /* Optional: Add a border for better visibility */
   padding: 10px; /* Optional: Add some padding */
@@ -72,6 +96,10 @@ max-height: 400px; /* Adjust the height to show 3 buttons */
 
 .scroll-container > div {
     margin-bottom: 10px;
+}
+
+.span {
+    border-color: black;
 }
 
 .button-container {
@@ -88,5 +116,9 @@ max-height: 400px; /* Adjust the height to show 3 buttons */
     border-radius: 10px;
     max-height: 800px;
     overflow-y: auto;
+    background-color: #f9f9f9;
+}
 
+body {
+    margin: 0px;
 }
