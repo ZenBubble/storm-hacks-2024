@@ -54,8 +54,8 @@ function MainPage() {
       <div class="boxes">
       {select && (
                 <div className="result-container">
-                    <h3>Ingredients:</h3>
-                    <p>{select.ingredients}</p>
+                    <h3 className="result-header">Ingredients:</h3>
+                    <p className="result-txt">{select.ingredients}</p>
                     <h3>Recipe:</h3>
                     <p>{select.steps}</p>
                 </div>

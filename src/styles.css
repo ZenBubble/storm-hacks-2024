@@ -79,7 +79,7 @@
 }
 
 .save-btn {
-    background-color: grey;
+    background-color: rgb(52, 52, 52);
     color: white;
 }
 
@@ -95,7 +95,7 @@
 }
 
 .delete-btn {
-    background-color: grey;
+    background-color: rgb(255, 0, 0);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -136,3 +136,15 @@
 .two { background-color: lightgray; }
 .three { background-color: lightgray; }
 .four { background-color: lightgray; }
+
+#genBtn {
+    height: 100px;
+}
+
+#result-header {
+    font-size: 1000px;
+}
+
+#result-text {
+    
+}

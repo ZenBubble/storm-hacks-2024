@@ -82,7 +82,7 @@ function TestAi({ recipes, updateRecipes }) {
                         value={ing}
                         onChange={(e) => setIng(e.target.value)} />
                 </div>
-                <button onClick={handleAddIngredient}>Add Ingredient</button>
+                <button class="save-btn" onClick={handleAddIngredient}>Add Ingredient</button>
                 <div>
                     {ingredients.map((ingredient, index) => (
                         <div className="fridge-ingredient-button" key={index}>
@@ -102,9 +102,9 @@ function TestAi({ recipes, updateRecipes }) {
                                 </div>
                             ))}
                         </ul>
-                        <button onClick={handleClearSelectedIngredients}>Clear Selected Ingredients</button>
-                        <div id="genBut">
-                            <button onClick={callOpenAIApi}>Get recipe</button>
+                        <button class="delete-btn" onClick={handleClearSelectedIngredients}>Clear Selected Ingredients</button>
+                        <div id="genBtn">
+                            <button class="generate-btn" onClick={callOpenAIApi}>Get recipe</button>
                         </div>
                     </div>
                 </div>
