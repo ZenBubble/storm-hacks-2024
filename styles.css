@@ -1,0 +1,99 @@
+* { 
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box; 
+}
+
+#titlescreen {
+    padding: 50px;
+    background-color: grey;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 100px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+#textarea-container {
+    width: 40%;
+}
+
+#textarea {
+    height: 400px;
+    width: 100%; 
+    background-color: grey;
+    border-radius: 10px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.save-btn, .generate-btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-btn {
+    background-color: grey;
+    color: white;
+}
+
+.generate-btn {
+    background-color: green;
+    color: white;
+}
+
+.delete-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.delete-btn {
+    background-color: grey;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.boxes {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    flex-grow: 1;
+    height: 200px;
+}
+
+.row div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    font-size: 24px;
+}
+
+.one { background-color: red; }
+.two { background-color: yellow; color: black; }
+.three { background-color: green; }
+.four { background-color: blue; }
