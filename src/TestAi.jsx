@@ -6,6 +6,12 @@ function TestAi({ recipes, updateRecipes }) {
     const [ingredients, setIngredients] = useState([])
     const [selectedIngredients, setSelectedIngredients] = useState([])
 
+
+
+
+
+
+
     const handleAddIngredient = () => {
         if (ing.trim() !== "") {
             setIngredients([...ingredients, ing]);

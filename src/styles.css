@@ -55,8 +55,9 @@
     border-radius: 0px;
     resize: none;
     background-image: url("fridge.webp");
-    background-position: 50% -100%;
-    background-size: 250%;
+    background-position: 250px 50%;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 #inp {

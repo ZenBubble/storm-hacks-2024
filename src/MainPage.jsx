@@ -9,6 +9,7 @@ function MainPage() {
     const [select, setSelect] = useState({});
     const updateRecipes = (newRecipes) => {setRecipes(newRecipes)}
     const updateSelected = (recipe) => {setSelect(recipe)}
+    
 
     return (
         <>
