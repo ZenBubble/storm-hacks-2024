@@ -75,7 +75,7 @@ function TestAi({ recipes, updateRecipes }) {
 
 
             <div className="fridge-container">
-                <h1>Add to your fridge!</h1>
+                <h1 id = "fridge-label">Add to your fridge!</h1>
                 <div>
                     <textarea
                         id='inp'
@@ -115,9 +115,9 @@ function TestAi({ recipes, updateRecipes }) {
                         <button class="generate-btn" onClick={callOpenAIApi}>Get recipe</button>
                     </div>
                 </div>
-                </div>
-            </>
-            )
+            </div>
+        </>
+    )
 }
 
 export default TestAi

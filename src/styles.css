@@ -54,15 +54,32 @@ body {
 }
 
 #textarea {
+    position: relative;
     height: 400px;
     width: 100%; 
     background-color: grey;
-    border-radius: 0px;
+    border-radius: 10px;
     resize: none;
+    /* background-image: url("fridge.webp");
+    background-position: 250px 50%;
+    background-size: 100%;
+    background-repeat: no-repeat; */
+    
+}
+#textarea::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url("fridge.webp");
     background-position: 250px 50%;
     background-size: 100%;
     background-repeat: no-repeat;
+    opacity:0.25;
+    pointer-events: none;
+
 }
 
 #inp {
@@ -81,6 +98,7 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    
 }
 
 .save-btn {
@@ -135,12 +153,17 @@ body {
 .box {
     background-color: lightgray;
     border: 2px solid black;
+    
 }
 
 .one { background-color: lightgray; }
 .two { background-color: lightgray; }
 .three { background-color: lightgray; }
 .four { background-color: lightgray; }
+
+#fridge-label {
+    padding-top: 10px;
+}
 
 #genBtn {
     height: 100px;
@@ -154,6 +177,12 @@ body {
     max-height: 75px; 
     overflow-y: auto;
 
+}
+
+.fridge-container {
+    flex-direction:column;
+    justify-content:flex-end;
+    
 }
 
 #fridge-ingredients {
